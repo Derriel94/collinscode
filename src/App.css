@@ -1,0 +1,121 @@
+.App {
+  background-color: black;
+  inset: 5%;
+  position: absolute;
+  border-radius: 20px;
+}
+/*NAVIGATION START*/
+.nav {
+  display: flex;
+  position: absolute;
+  inset: 10%;
+}
+.nav div {
+
+}
+.active {
+   border-bottom: #004369 1px solid;
+}
+#link {
+  text-decoration: none;
+  padding: 6px;
+  margin: 6px;
+  color: #E7F6FC;
+}
+#link:hover {
+  border-bottom: #E7F6FC 1px solid;
+}
+.donotshowroutes {
+  display: none;
+}
+
+/*NAVIGATION END*/
+
+/*HOME OR APP START*/
+
+.left-column {
+
+}
+.infocontainer {
+  position: relative;
+  left: 10%;
+  top: 150px;
+  height: 500px;
+  width: 500px;
+  background-color: rgba(231,246,252, .111);
+  border-radius: 20px;
+
+
+}
+.logo {
+  max-height: 250px;
+  max-width: 250px;
+  position: absolute;
+  top: 25px;
+  left: 118px;
+}
+.skillbubbles {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skillbubble {
+ height: 30px;
+ width: 100px;
+ background-color: #E7F6FC;
+ margin: 10px;
+ padding-right: 5px;
+ padding-left: 5px;
+ border-radius: 200px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: black;
+ font-size: .8rem;
+}
+.button {
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+  width: 150px;
+  height: 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.button:hover {
+  background-color: rgba(165,207,227, .6);
+  color: ghostwhite;
+}
+
+#light {
+  background-color: #E7F6FC;
+  color: #004369;
+}
+#med {
+  background-color: #A5CFE3;
+  color: #004369;
+}
+#dark {
+  background-color: #004369;
+  color: #E7F6FC;
+}
+
+/*HOME OR APP END*/
+
+
+
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
