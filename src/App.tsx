@@ -10,10 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+        <Nav />
         <RouterNav/>
-      </div>
-      <Nav />
     </div>
   )
 }

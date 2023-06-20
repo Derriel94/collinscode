@@ -1,14 +1,24 @@
 .App {
   background-color: black;
-  inset: 5%;
-  position: absolute;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90vh;
+  width: 90%;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-shadow: inset 0px 0px 10px 8px rgba(255, 255, 255, 1.0);
+
 }
 /*NAVIGATION START*/
 .nav {
   display: flex;
   position: absolute;
-  inset: 10%;
+  top: 5%;
+  right: 25%;
+  z-index: 2;
 }
 .nav div {
 
@@ -20,10 +30,11 @@
   text-decoration: none;
   padding: 6px;
   margin: 6px;
-  color: #E7F6FC;
+  color: ghostwhite;
 }
 #link:hover {
   border-bottom: #E7F6FC 1px solid;
+  color: rgba(165,207,227);
 }
 .donotshowroutes {
   display: none;
@@ -31,35 +42,37 @@
 
 /*NAVIGATION END*/
 
-/*HOME OR APP START*/
+/*HOME START*/
 
+.home {
+  display: flex;
+  align-items: center;
+}
 .left-column {
-
+  position: relative;
+  background-color: black;
+  z-index: 1;
+  margin-left: 150px;
 }
 .infocontainer {
-  position: relative;
-  left: 10%;
-  top: 150px;
-  height: 500px;
+  height: 600px;
   width: 500px;
   background-color: rgba(231,246,252, .111);
   border-radius: 20px;
-
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0px 0px 20px 3px rgba(255, 255, 255, 1.0);
 }
 .logo {
   max-height: 250px;
   max-width: 250px;
-  position: absolute;
-  top: 25px;
-  left: 118px;
+  min-width: 150px;
+  min-width: 150px;
 }
 .skillbubbles {
-  position: absolute;
-  top: 250px;
-  left: 50px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .skillbubble {
@@ -75,19 +88,19 @@
  align-items: center;
  color: black;
  font-size: .8rem;
+
+
 }
 .button {
-  position: absolute;
-  bottom: 30px;
-  left: 80px;
   width: 150px;
   height: 40px;
   font-size: 1rem;
   cursor: pointer;
-  z-index: 2;
+  margin-top: 60px;
+  margin-right: 200px;
 }
 .button:hover {
-  background-color: rgba(165,207,227, .6);
+  background-color: rgba(165,207,227);
   color: ghostwhite;
 }
 
@@ -104,6 +117,76 @@
   color: #E7F6FC;
 }
 
+
+#light:hover {
+  
+  background-color: #004369;
+  color: #E7F6FC;
+}
+#med:hover {
+  background-color: ghostwhite;
+  color: #004369;
+}
+#dark:hover {
+  background-color: #E7F6FC;
+  color: #004369;
+}
+
+
+.right-column {
+ 
+}
+
+.carousel {
+  cursor: grab;
+  border-radius: 20px;
+  max-width: 960px;
+  height: 500px;
+  overflow: hidden;
+/*  margin: 0 20%;*/
+  margin-left: 600px;
+
+/*  box-shadow: inset 0px 0px 20px 3px rgba(255, 255, 255, 1.0);*/
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+
+}
+.innercarousel {
+  display: flex;
+/*  align-items: center;*/
+ 
+
+}
+.item {
+  min-height: 350px;
+  min-width: 350px;
+  padding: 20px;
+  text-align: center;
+
+}
+.item div {
+    opacity: .6;
+}
+.item img {
+  height: 350px;
+  width: 350px;
+  border: rgba(231,246,252) 3px solid;
+
+  margin: 10px;
+  border-radius: 100px;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 1.0);
+  pointer-events: none;
+}
+.projecttitle {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: ghostwhite;
+}
+.projecttitle:hover {
+  color: rgba(165,207,227);
+}
 /*HOME OR APP END*/
 
 
