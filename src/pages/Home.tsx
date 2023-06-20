@@ -2,14 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import logoimg from './../assets/images/logo.png';
 import Slider from './../components/Slider.tsx';
-const Home = () => {
+import { Link } from "react-router-dom";
+const Home = ({contactactive, handlecontactactive}) => {
 
 	return (
 		<motion.div 
 			className="home"
 			initial={{opacity: 0}}
 			animate={{opacity: 1}}
-			transition={{ delay: 0, duration: 5}}
+			transition={{ delay: 0, duration: 2.5}}
 			>
 			<div className="left-column">
 	        	<div className="infocontainer">
@@ -29,12 +30,12 @@ const Home = () => {
 	            		<div id="dark" className="skillbubble">Google</div>
 	            		</div>
 	            		<div>
-	            		<div id="dark" className="skillbubble">Content Creation</div>
+	            		<div id="dark" className="skillbubble">Content</div>
 	            		<div id="med" className="skillbubble">Responsive</div>
 	            		<div id="light" className="skillbubble">Efficient</div>
 	          			</div>
 	          		</div>
-	          		<button className="button skillbubble">Learn More</button>
+	          		<Link to="/contact" className={`button skillbubble ${contactactive ? "active": "" } ` } onClick={handlecontactactive}>Learn More</Link>
 	        	</div>
 	        </div>
 	      	<Slider />
