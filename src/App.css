@@ -1,16 +1,21 @@
 .App {
-  background-color: black;
-  margin-top: 50px;
+ 
+  /*margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   height: 90vh;
   width: 90%;
-  border-radius: 20px;
+  border-radius: 20px;*/
   display: flex;
   align-items: center;
   position: relative;
   box-shadow: inset 0px 0px 10px 8px rgba(255, 255, 255, 1.0);
 
+}
+#v2 {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 /*NAVIGATION START*/
 .nav {
@@ -45,8 +50,10 @@
 /*HOME START*/
 
 .home {
+  position: absolute;
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
 }
 .left-column {
   position: relative;
@@ -73,6 +80,7 @@
 .skillbubbles {
   display: flex;
   justify-content: center;
+  color: ghostwhite;
 }
 
 .skillbubble {
@@ -136,8 +144,8 @@
 .carousel {
   cursor: grab;
   border-radius: 20px;
-  max-width: 960px;
-  height: 500px;
+  max-width: 1280px;
+  height: 600px;
   overflow: hidden;
   margin-left: 600px;
   position: absolute;
@@ -153,8 +161,8 @@
 
 }
 .item {
-  min-height: 350px;
-  min-width: 350px;
+  min-height: 300px;
+  min-width: 300px;
   padding: 20px;
   text-align: center;
 
@@ -163,8 +171,8 @@
     opacity: .6;
 }
 .item img {
-  height: 350px;
-  width: 350px;
+  height: 300px;
+  width: 300px;
   border: rgba(231,246,252) 3px solid;
 
   margin: 10px;
@@ -196,12 +204,15 @@
 
 .contactpageleftside {
   margin-left: 200px;
+  border: ghostwhite double 5px;
   border-radius: 200px;
+  overflow: hidden; 
+  box-shadow: 0px 0px 30px 10px RGB(0,125,186);
 }
 #video {
   width: 100%;
   height: 100%;
-  overflow: hidden; 
+
 }
 
 .contactpagerightside {
@@ -216,16 +227,18 @@
 }
 .contactname {
   font-size: 1.5rem;
-  color: #004369;
+  color: rgba(0,125,186);
+  border:2px RGB(0,125,186) solid;
   border-radius: 20px;
-  box-shadow: inset 0px 0px 5px 3px rgba(255, 255, 255, 1.0);
+  box-shadow: 0px 0px 5px 3px RGB(0,125,186);
   display: flex;
   justify-content: center;
 }
 .contactname:hover {
   background-color: rgba(255, 255, 255, 1.0);
-  color: black;
+  color: rgba(0,125,186);
 }
+
 #black {
   color:black;
   margin: 0 10px;
@@ -257,8 +270,16 @@
 }
 .submit:hover {
   background-color: black;
-  color: ghostwhite;
+  color: RGB(0,125,186);
 }
+.contactcalltoaction {
+  font-weight: bolder;
+  position: absolute;
+  margin-left: 1000px;
+  margin-right: auto;
+  bottom: 100px;
+}
+
 /*CONTACT END*/
 
 

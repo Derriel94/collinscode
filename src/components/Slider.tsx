@@ -16,7 +16,7 @@ export default function Slider() {
 						<motion.div className="item">
 							<motion.div
 								transition={{delay: 0, duration: 1, type: "spring"}}
-								whileHover={{ scale: 1.1, opacity: 1 }}
+								whileHover={{ scale: 1.3, opacity: 1 }}
 							>
 							<img id="img "src={project.imgUrl} key={`${project.id} ${project.projectName}`} alt="" />
 							<a href={project.projectUrl} target="_blank" rel="noreferrer" className="projecttitle">{project.projectName}</a>

@@ -53,6 +53,14 @@ function App() {
 
   return (
     <div className="App">
+    <video   
+        id="v2" 
+        autoPlay 
+        loop
+        muted 
+        src="dude.mp4" 
+        type="video/mp4">
+      </video>
         <Nav 
           homeactive={homeactive} 
           handlehomeactive={handlehomeactive} 
@@ -67,6 +75,7 @@ function App() {
           handlecontactactive={handlecontactactive}
           contentactive={contentactive}
           handlecontentactive={handlecontentactive}/>
+          {/*<h1 className="contactcalltoaction">Call Now! 4698918404</h1>*/}
     </div>
   )
 }

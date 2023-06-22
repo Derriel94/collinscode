@@ -26,24 +26,38 @@ const Contact = () => {
 			initial={{opacity: 0}}
 			animate={{opacity: 1}}
 			transition={{ delay: 0, duration: 2.5}}>
-			<div className="contactpageleftside">
-			<video 
-				id="video"
+			<motion.div className="contactpageleftside"
+						initial={{x: -350}}
+						animate={{x: 0}}
+						transition={{ delay: 0, duration: 2.5, type: "spring", bounce: .8}}>
+			<motion.video 
+				initial={{scale: 1}}
+				animate={{scale: 1.2}}
+			   	transition={{          // Animation transition settings
+			         duration: 1,
+			         repeat: Infinity,      // Repeat the animation indefinitely
+			         repeatType: 'reverse',
+			         bounce: 1  // Reverse the animation on each repeat
+			        }}				
+			    id="video"
 				autoPlay 
 				loop
 				muted 
 				src="dud.mp4" type="video/mp4">
-			</video>
-			</div>
-			<div className="contactpagerightside">
+			</motion.video>
+			</motion.div>
+			<motion.div className="contactpagerightside"
+						initial={{x: 350}}
+						animate={{x: 0}}
+						transition={{ delay: 0, duration: 2.5, type: "spring", bounce: .8}}>
 				<div className="contactform">
-					<div className="contactname"><div id="black">★</div> Leave A Message <div id="black">★</div></div>
+					<div className="contactname"><div>★</div> Leave A Message <div>★</div></div>
 					<input placeholder={name} className="name"onChange={(e)=>handleNameChange(e)}/>
 					<input placeholder={email} className="email"onChange={(e)=>handleEmailChange(e)}/>
 					<textarea placeholder={message} className="message"onChange={(e)=>handleMessageChange(e)}/>					
 					<input type="submit" value="submit" onClick={handleSubmit} className="submit" />
 				</div>
-			</div>
+			</motion.div>
 		</motion.div>
 		);
 
