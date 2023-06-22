@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
 	const [name, setName] = useState<string>('Cool Client or Employer');
 	const [email, setEmail] = useState<string>('cool@email.com');
-	const [message, setMessage] = useState<string>(`cool web/app/content idea, set your price and we will talk.`)
+	const [message, setMessage] = useState<string>(`cool web/app/content idea, set your price and we will talk. Potential employer?`);
 
 	const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     	setName(e.target.value);
@@ -44,6 +44,7 @@ const Contact = () => {
 				loop
 				muted 
 				src="dud.mp4" type="video/mp4">
+
 			</motion.video>
 			</motion.div>
 			<motion.div className="contactpagerightside"

@@ -53,14 +53,14 @@ function App() {
 
   return (
     <div className="App">
-    <video   
+   {/* <video   
         id="v2" 
         autoPlay 
         loop
         muted 
         src="dude.mp4" 
         type="video/mp4">
-      </video>
+      </video>*/}
         <Nav 
           homeactive={homeactive} 
           handlehomeactive={handlehomeactive} 

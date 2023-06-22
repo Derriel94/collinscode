@@ -5,18 +5,26 @@
   margin-right: auto;
   height: 90vh;
   width: 90%;
-  border-radius: 20px;*/
+ */
   display: flex;
-  align-items: center;
-  position: relative;
+  border-radius: 20px;
+  border: solid 2px #004369;
   box-shadow: inset 0px 0px 10px 8px rgba(255, 255, 255, 1.0);
+/*  height: 100%;
+  width: 100%;*/
+
+/*  background-image: url(./rotate.gif);*/
+
+  overflow: hidden;
+  background-color: #f2f2f9;
+  position: relative;
+  top: 100px;
+  left:100px;
+  height: 700px;
+  width: 1600px;
 
 }
-#v2 {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
+
 /*NAVIGATION START*/
 .nav {
   display: flex;
@@ -35,10 +43,11 @@
   text-decoration: none;
   padding: 6px;
   margin: 6px;
-  color: ghostwhite;
+  color: #004369;
+  font-weight: bolder;
 }
 #link:hover {
-  border-bottom: #E7F6FC 1px solid;
+  border-bottom: #004369 1px solid;
   color: rgba(165,207,227);
 }
 .donotshowroutes {
@@ -53,29 +62,31 @@
   position: absolute;
   display: flex;
   align-items: center;
-  margin-bottom: 100px;
+  
 }
-.left-column {
-  position: relative;
-  background-color: black;
-  z-index: 1;
-  margin-left: 150px;
-}
+
 .infocontainer {
   height: 600px;
   width: 500px;
-  background-color: rgba(231,246,252, .111);
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: inset 0px 0px 20px 3px rgba(255, 255, 255, 1.0);
+  position: relative;
+  background-color: #004369;
+  z-index: 1;
+  top: 45px;
+  margin-left: 150px;
+  border-radius: 20px;
+  border: ghostwhite groove 5px;
+  box-shadow: 0px 0px 30px 10px RGB(0,125,186);
+
 }
 .logo {
   max-height: 250px;
   max-width: 250px;
   min-width: 150px;
   min-width: 150px;
+  margin-top: 50px;
 }
 .skillbubbles {
   display: flex;
@@ -144,25 +155,28 @@
 .carousel {
   cursor: grab;
   border-radius: 20px;
-  max-width: 1280px;
+  max-width: 1000px;
   height: 600px;
   overflow: hidden;
-  margin-left: 600px;
-  position: absolute;
+  position: relative;
+  top: 45px;
   display: flex;
   align-items: center;
 
 
 }
+
 .innercarousel {
   display: flex;
 /*  align-items: center;*/
- 
-
+   background-color: #004369;
+  box-shadow: 0px 0px 30px 10px RGB(0,125,186);
+  border-top: ghostwhite groove 5px;
+  border-bottom: ghostwhite groove 5px;
 }
 .item {
-  min-height: 300px;
-  min-width: 300px;
+  min-height: 310px;
+  min-width: 310px;
   padding: 20px;
   text-align: center;
 
@@ -187,6 +201,21 @@
 }
 .projecttitle:hover {
   color: rgba(165,207,227);
+}
+
+#info {
+  position: absolute;
+  padding: 2px;
+  color: #004369;
+  font-size: 2rem;
+  font-weight: bolder;
+  left: 1000px;
+  bottom: -10px;
+  border-radius: 20px;
+  background-color: ghostwhite;
+  box-shadow: 0px 0px 5px 5px RGB(0,125,186);
+  border-top: ghostwhite solid 1px;
+
 }
 /*HOME END*/
 
@@ -235,7 +264,7 @@
   justify-content: center;
 }
 .contactname:hover {
-  background-color: rgba(255, 255, 255, 1.0);
+  background-color: RGB(0,125,186);
   color: rgba(0,125,186);
 }
 
@@ -246,11 +275,17 @@
 .name {
   margin: 5px;
   border-radius: 10px;
+   border:1px RGB(0,125,186) solid;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 3px RGB(0,125,186);
 }
 
 .email {
   margin: 5px;
   border-radius: 10px;
+  border:1px RGB(0,125,186) solid;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 3px RGB(0,125,186);
 }
 
 .message {
@@ -258,6 +293,9 @@
   width: 350px;
   height: 350px;
   border-radius: 10px;
+ border:1px RGB(0,125,186) solid;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 3px RGB(0,125,186);
 }
 .submit {
   width: 100px;
@@ -269,8 +307,8 @@
   box-shadow: inset 0px 0px 5px 3px rgba(255, 255, 255, 1.0);
 }
 .submit:hover {
-  background-color: black;
-  color: RGB(0,125,186);
+  background-color: RGB(0,125,186);
+  color: ghostwhite;
 }
 .contactcalltoaction {
   font-weight: bolder;
@@ -282,7 +320,62 @@
 
 /*CONTACT END*/
 
+/*CONENT START*/
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+.contentpuzzle {
+  position: relative;
+ /* top: 150px;
+  left: 200px;*/
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  margin-left: 200px;
+}
+.contentpuzzle div {
+   border-radius: 20px;
+}
+
+.contentpuzzle img {
+  height: 120px;
+  width: 120px;
+  background-size: cover;
+   border-radius: 20px;
+   cursor: pointer;
+
+}
+.imagebackground {
+  background-color: black;
+  height: 125px;
+  width: 125px;
+  box-shadow: 5px 5px 20px 10px rgba(0,125,186, .6);
+}
+.largeImage {
+  margin-left: 350px;
+   border-radius: 20px;
+  box-shadow: 0px 0px 10px 10px RGB(0,125,186);
+}
+.largeImage img {
+  height: 450px;
+  width: 450px;
+  border-radius: 20px;
+}
+.typewriter {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.6rem;
+  word-wrap: break-word;
+  width: 15px;
+  left: 100px;
+
+}
+/*CONTENT END*/
 
 @keyframes logo-spin {
   from {
