@@ -28,7 +28,7 @@ const Contact = () => {
 			transition={{ delay: 0, duration: 2.5}}>
 			<motion.div className="contactpageleftside"
 						initial={{x: -350}}
-						animate={{x: 0}}
+						animate={{x: 100}}
 						transition={{ delay: 0, duration: 2.5, type: "spring", bounce: .8}}>
 			<motion.video 
 				initial={{scale: 1}}
@@ -44,7 +44,6 @@ const Contact = () => {
 				loop
 				muted 
 				src="dud.mp4" type="video/mp4">
-
 			</motion.video>
 			</motion.div>
 			<motion.div className="contactpagerightside"

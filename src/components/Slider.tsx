@@ -23,7 +23,7 @@ export default function Slider() {
 								whileHover={{ scale: 1.1, opacity: 1 }}
 							>
 							<motion.img id="img "src={project.imgUrl} key={`${project.id} ${project.projectName}`} alt="" />
-							<a href={project.projectUrl} target="_blank" rel="noreferrer" className="projecttitle">{project.projectName}</a>
+							<div><a href={project.projectUrl} target="_blank" rel="noreferrer" className="projecttitle">{project.projectName}</a></div>
 							</motion.div>
 							
 						</motion.div>

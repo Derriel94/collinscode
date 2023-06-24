@@ -18,6 +18,10 @@ const Home = ({contactactive, handlecontactactive}) => {
 	          		animate={{ scale: 1.3 }}
                 	transition={{ type: "spring",bounce: .8, duration: 5, repeat: Infinity }}
 	          		className="logo" src="./cc.png" />
+	          			<motion.img 
+	          		animate={{ scale: 1.3 }}
+                	transition={{ type: "spring",bounce: .8, duration: 5, repeat: Infinity }}
+	          		className="mobilelogo" src="./icon2.png" />
 	          		<div className="skillbubbles">
 	          		<motion.div
 	          		initial={{opacity: 0}}
@@ -44,22 +48,6 @@ const Home = ({contactactive, handlecontactactive}) => {
 	        	  		that make a lasting impact.
 	        	  		</motion.div>
 	        	  		</motion.div>
-	          		{/*<Typewriter	/>*/}
-	          			{/*<div>
-	            		<div id="light" className="skillbubble">Web Design</div>
-	            		<div id="med"  className="skillbubble">Applicatoin Dev</div>
-	            		<div id="dark" className="skillbubble">Web Dev</div>
-	            		</div>
-	            		<div>
-	            		<div id="med" className="skillbubble">TypeScript</div>
-	            		<div id="light" className="skillbubble">Node</div>
-	            		<div id="dark" className="skillbubble">Google</div>
-	            		</div>
-	            		<div>
-	            		<div id="dark" className="skillbubble">Content</div>
-	            		<div id="med" className="skillbubble">Responsive</div>
-	            		<div id="light" className="skillbubble">Efficient</div>
-	          			</div>*/}
 	          		</div>
 	          		<Link to="/contact" className={`button skillbubble ${contactactive ? "active": "" } ` } onClick={handlecontactactive}>Learn More</Link>
 	        </div>

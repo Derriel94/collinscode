@@ -52,7 +52,7 @@ const Content = () => {
 									initial={{opacity: 0}}
 									animate={{opacity: 1}}
 									transition={{ delay: 0, duration: 1.5}}
-									whileHover={{ scale: 1.1, x: "15px",y: "15px"}}
+									whileHover={{ scale: 1.2, x: "15px",y: "15px"}}
 									/>
 								</motion.div>
 					})}
@@ -62,7 +62,7 @@ const Content = () => {
 				initial={{ opacity: 0 }}
         		animate={{ opacity: 1 }}
         		exit={{ opacity: 0 }} 
-				style={{color: "black"}} className="typewriter">{title}</motion.div>
+				style={{color: "black"}} id="typewriter" className="typewriter">{title}</motion.div>
 				</AnimatePresence>
 				<motion.div 
 				initial={{x:"-500px"}}
