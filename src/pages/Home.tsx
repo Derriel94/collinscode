@@ -16,11 +16,11 @@ const Home = ({contactactive, handlecontactactive}) => {
 	        	<div className="infocontainer">
 	          		<motion.img 
 	          		animate={{ scale: 1.3 }}
-                	transition={{ type: "spring",bounce: .8, duration: 5, repeat: Infinity }}
+                	transition={{ bounce: .8, duration: 2 }}
 	          		className="logo" src="./cc.png" />
 	          			<motion.img 
-	          		animate={{ scale: 1.3 }}
-                	transition={{ type: "spring",bounce: .8, duration: 5, repeat: Infinity }}
+	          		animate={{ scale: 2 }}
+                	transition={{bounce: .8, duration: 2}}
 	          		className="mobilelogo" src="./icon2.png" />
 	          		<div className="skillbubbles">
 	          		<motion.div

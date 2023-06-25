@@ -14,6 +14,27 @@
 }
 
 /*NAVIGATION START*/
+.mobilenavbutton {
+  display: none;
+  color: black;
+  margin-left: 150px;
+  margin-top: 10px;
+  position: absolute;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px;
+  z-index: 3;
+}
+
+.mobilenav {
+  display: none;
+  color: black;
+  position: absolute;
+  z-index: 3;
+
+}
+
+
 .nav {
   display: flex;
   position: absolute;
@@ -374,7 +395,7 @@
 
 /*LAPTOP MEDIA QUERIES START*/
 
-@media screen and (width <= 1285px)  {
+@media (width:1285px)  {
 
   .App {
   display: flex;
@@ -411,6 +432,9 @@
   border: ghostwhite groove 5px;
   box-shadow: 0px 0px 30px 10px RGB(0,125,186);
 }
+/*.mobilenavbutton {
+  cursor: pointer;
+}*/
 
 .logo {
   max-height: 250px;
@@ -680,7 +704,7 @@
 
 /*IPHONE MEDIA QUERIES START*/
 
-@media screen and (max-width:430px)  {
+@media (max-width:430px)  {
 
   .App {
   display: flex;
@@ -699,8 +723,31 @@
 
 }
 /*NAVIGATION START*/
-.nav {
+.mobilenavbutton {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+}
+.mobilenav {
   display: flex;
+  flex-direction: column;
+  color: black;
+  z-index: 3;
+}
+.mobilenav div {
+  background-color: ghostwhite;
+  box-shadow: .5px .5px 2px 2px rgba(165,207,227);
+  border-radius: 20px;
+  margin: 5px;
+
+}
+/*.mobilenav div {
+   margin-left: -50px;
+}
+*/
+.nav {
+  display: none;
   z-index: 2;
 }
 .nav div {
@@ -757,16 +804,18 @@
   display: none;
 }
 .mobilelogo {
-  display: block;
+  display: flex;
   height: 60px;
   width: 30px;
   margin-top: 40px;
+
 }
 .skillbubbles {
   display: flex;
   justify-content: center;
   color: ghostwhite;
   margin-left: 5px;
+  margin-top: 40px;
 }
 
 .button {
@@ -1012,7 +1061,7 @@
 
 /*ANDROID MEDIA QUERIES START*/
 
-@media screen and (width <= 365px) and (height <= 765px)  {
+@media (max-width:365px) and (max-height:765px)  {
 
   .App {
   display: flex;
@@ -1030,8 +1079,19 @@
   width: 355px;
 }
 /*NAVIGATION START*/
-.nav {
+.mobilenavbutton {
   display: flex;
+  cursor: pointer;
+  color: black;
+  position: absolute;
+}
+.mobilenav {
+  display: flex;
+  color: black;
+   position: absolute;
+}
+.nav {
+  display: none;
   z-index: 2;
 }
 .nav div {
