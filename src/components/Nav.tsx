@@ -1,42 +1,41 @@
-import React,{useState, useEffect} from 'react';
+import {useState} from 'react';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+interface NavProps {
+  homeactive: boolean;
+  contactactive: boolean;
+  handlehomeactive: () => void;
+  handlecontactactive: () => void;
+  contentactive: boolean;
+  handlecontentactive: () => void;
+}
 
-
-const Nav = ({homeactive, contactactive, 
-			  handlehomeactive, handlecontactactive, 
-			  contentactive, handlecontentactive}) => {
+const Nav = ({
+  homeactive,
+  contactactive,
+  handlehomeactive,
+  handlecontactactive,
+  contentactive,
+  handlecontentactive,
+}: NavProps) => {
 	
 	const [displayMobileNav, setDisplayMobileNav] = useState<boolean>(false);
 	const [menuName, setMenuName] = useState<string>('Menu');
 	const switchMobileNav = () => {
     if (displayMobileNav == false) {
       setDisplayMobileNav(true)
+      setMenuName(`Close`)
     	} else {
       	setDisplayMobileNav(false)
+      	setMenuName("Menu")
     	}
   	}
-
-  	const mobileNavVarient = {
-  		initial: { opacity: 0, scale: 0, y: 0, transition: {
-      	duration: 0.3,
-      	delay: 0,
-      	ease: "easeInOut"}},
-  		animate: { opacity: 1, scale: 1, x: 0,  transition: {
-      	duration: 0.3,
-      	delay: 0,
-      	ease: "easeInOut"}},
-  		exit: { opacity: 0, scale: 0 ,  transition: {
-									      	duration: 0.3,
-									      	delay: 0,}}
-
-  	};
 
 
 	return (
 		<div>
-			<motion.button onClick={switchMobileNav} className="mobilenavbutton">MENU</motion.button>
+			<motion.button onClick={switchMobileNav} className="mobilenavbutton">{menuName}</motion.button>
 			{displayMobileNav
 			?
 			<motion.div 

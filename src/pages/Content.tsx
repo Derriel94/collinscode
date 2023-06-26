@@ -1,14 +1,14 @@
-import React,{ useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import images from "./../components/Images.tsx";
 
 const Content = () => {
 
-	const [largeImg, setLargeImg] = useState("")<string>;
-	const [title, setTitle] = useState(" ")<string>;
-	const [start, setStart] = useState(false)<boolean>;
+	const [largeImg, setLargeImg] = useState("./icon.png");
+	const [title, setTitle] = useState(" ");
+	const [start, setStart] = useState(false);
 	let text = `  Content  Creation`;
-	const displayImage = (imgsrc):void => {
+	const displayImage = (imgsrc: string):void => {
 		setLargeImg(imgsrc);
 		setStart(true);
 	}
@@ -78,7 +78,7 @@ const Content = () => {
 				animate={{x:0}}
 				transition={{ delay: 0, duration: 1.5}}
 				className="largeImage">
-					{largeImg ? <motion.img src={`./${largeImg}`} /> : <motion.img src="./icon.png" />}
+				<motion.img src={largeImg} />
 				</motion.div>
 			</div>
 		);

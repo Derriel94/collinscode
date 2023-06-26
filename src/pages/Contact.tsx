@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import { useState, ChangeEvent } from "react";
 import { motion } from "framer-motion";
 
 
@@ -13,11 +13,11 @@ const Contact = () => {
   	const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     	setEmail(e.target.value);
   	}
-  	const handleMessageChange = (e: ChangeEvent<HTMLInputElement>) => {
+  	const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     	setMessage(e.target.value);
   	}
-  	const handleSubmit = (e: ChangeEvent<HTMLInputElement>) => {
-  		e.preventDefault();
+  	const handleSubmit = () => {
+ 
   	}
 
 	return ( 
@@ -43,7 +43,7 @@ const Contact = () => {
 				autoPlay 
 				loop
 				muted 
-				src="dud.mp4" type="video/mp4">
+				src="dud.mp4">
 			</motion.video>
 			</motion.div>
 			<motion.div className="contactpagerightside"

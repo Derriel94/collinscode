@@ -427,7 +427,7 @@
 
 /*LAPTOP MEDIA QUERIES START*/
 
-@media (width:1285px)  {
+@media (max-width:1285px)  {
 
   .App {
   display: flex;
@@ -1539,13 +1539,7 @@
 
 }
 /*NAVIGATION START*/
-.nav {
-  display: flex;
-  z-index: 2;
-}
-.nav div {
 
-}
 .active {
    border-bottom: #004369 1px solid;
 }

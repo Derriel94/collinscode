@@ -1,10 +1,13 @@
-import React,{useState, useRef} from "react";
 import { motion } from "framer-motion";
 import Slider from './../components/Slider.tsx';
-import Typewriter from 'typewriter-effect/dist/core';
-// import Typewriter from './../components/TypewriterAnimation.tsx';
 import { Link } from "react-router-dom";
-const Home = ({contactactive, handlecontactactive}) => {
+
+interface HomeProps { 
+	contactactive: boolean;
+	handlecontactactive: () => void;
+};
+
+const Home = ({contactactive, handlecontactactive}:HomeProps) => {
 
 	return (
 		<motion.div 

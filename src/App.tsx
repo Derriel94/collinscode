@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import Nav from './components/Nav.tsx';
-import Home from './pages/Home.tsx';
-import Contact from './pages/Contact.tsx';
 import RouterNav from './router/RouterNav.tsx';
 import './App.css';
 
@@ -69,13 +67,9 @@ function App() {
           handlecontactactive={handlecontactactive}
           contentactive={contentactive}
           handlecontentactive={handlecontentactive}/>
-        <RouterNav 
-          homeactive={homeactive} 
-          handlehomeactive={handlehomeactive} 
+        <RouterNav
           contactactive={contactactive}
-          handlecontactactive={handlecontactactive}
-          contentactive={contentactive}
-          handlecontentactive={handlecontentactive}/>
+          handlecontactactive={handlecontactactive}/>
           {/*<h1 className="contactcalltoaction">Call Now! 4698918404</h1>*/}
     </div>
   )
