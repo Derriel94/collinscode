@@ -40,18 +40,26 @@ const Nav = ({homeactive, contactactive,
 			{displayMobileNav
 			?
 			<motion.div 
-			className="mobilenav"
-			initial="initial"
-      		animate="animate"
-      		exit="exit"
-      		variants={mobileNavVarient}>
-				<motion.div>
+			className="mobilenav">
+				<motion.div
+					initial={{x:-90,}}
+      		animate={{x: 0}}
+      		exit={{x: -90}}
+      		transition={{delay: .3, duration: .5}}>
 					<Link className={ `${homeactive ? "active" : ""} `} onClick={handlehomeactive} id="link"to="/">Home</Link>
 				</motion.div>
-				<motion.div>
+				<motion.div
+					initial={{x:-90}}
+      		animate={{x: 0}}
+      		exit={{x: -90}}
+      		transition={{delay: .5, duration: .5}}>
 					<Link className={ `${contactactive ? "active": "" } `} onClick={handlecontactactive} id="link"to="/contact">Contact</Link>
 				</motion.div>
-				<motion.div>
+				<motion.div
+				  initial={{x:-90}}
+      		animate={{x: 0}}
+      		exit={{x: -90}}
+      		transition={{delay: .7, duration: .5}}>
 					<Link className={ `${contentactive ? "active": "" } `} onClick={handlecontentactive} id="link"to="/content">Content</Link>
 				</motion.div>
 			</motion.div>

@@ -57,6 +57,15 @@ const Content = () => {
 								</motion.div>
 					})}
 				</motion.div>
+				<div className="contentsection">
+					<p>"I can create exceptional content and 
+					logos that speak volumes. My designs will capture 
+					the essence of your brand, creating a lasting 
+					impression and establishing a strong visual 
+					identity that resonates with your target market."
+					<span style={{marginLeft: "20px"}}>-Derriel Collins</span>
+					</p>
+				</div>
 				<AnimatePresence>
 				<motion.div
 				initial={{ opacity: 0 }}

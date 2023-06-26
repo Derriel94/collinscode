@@ -58,6 +58,10 @@ const Contact = () => {
 					<input type="submit" value="submit" onClick={handleSubmit} className="submit" />
 				</div>
 			</motion.div>
+			<div className="mobilecontact">
+				<h1>469.891.8404</h1>
+				<h2>derrielcollins96@gmail.com</h2>
+			</div>
 		</motion.div>
 		);
 

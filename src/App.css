@@ -32,9 +32,34 @@
   position: absolute;
   z-index: 3;
 
+  
+}
+.mobilenav div {
+/*  position: relative;
+  left: -90px;*/
+ /* animation-name: moveRight;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;*/
+
+}
+/*.mobilenav div:nth-child(1) {
+  animation-delay: 1s;
+}
+.mobilenav div:nth-child(2) {
+  animation-delay: 2s;
+}
+.mobilenav div:nth-child(3) {
+  animation-delay: 3s;
 }
 
-
+@keyframes moveRight {
+  0% {
+    transform: translateX(-90px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}*/
 .nav {
   display: flex;
   position: absolute;
@@ -263,6 +288,9 @@
   text-align: center;
   margin: 5px;
 }
+.mobilecontact {
+  display: none;
+}
 .contactname {
   font-size: 1.5rem;
   color: rgba(0,125,186);
@@ -335,6 +363,10 @@
   justify-content: center;
   align-items: center;
 
+}
+.contentsection {
+  display: none;
+ 
 }
 .contentpuzzle {
   position: relative;
@@ -647,6 +679,8 @@
   align-items: center;
 
 }
+
+
 .contentpuzzle {
   position: relative;
   display: grid;
@@ -742,10 +776,7 @@
   margin: 5px;
 
 }
-/*.mobilenav div {
-   margin-left: -50px;
-}
-*/
+
 .nav {
   display: none;
   z-index: 2;
@@ -805,7 +836,7 @@
 }
 .mobilelogo {
   display: flex;
-  height: 60px;
+  height: 30px;
   width: 30px;
   margin-top: 40px;
 
@@ -922,7 +953,22 @@
   height: 100%;
 
 }
-
+.mobilecontact {
+  display: inline-block;
+  position: absolute;
+  top:650px;
+  
+  
+  color: RGB(0,125,186);
+}
+.mobilecontact h1{
+  cursor: pointer;
+  margin-left: 80px;
+}
+.mobilecontact h2{
+  cursor: pointer;
+  margin-left: 30px;
+}
 .contactpagerightside {
   margin-left: 45px;
 
@@ -1006,12 +1052,18 @@
 }
 .contentpuzzle {
   position: relative;
-  display: grid;
+  display: none;
   grid-template-columns: auto auto auto;
   gap: 10px;
   margin-left: 0px;
   max-width: 355;
 }
+.contentsection {
+  display: block;
+  font-size: 1.5rem;
+  color: rgba(0,125,186);
+}
+
 .contentpuzzle div {
    border-radius: 20px;
 }
@@ -1395,10 +1447,80 @@
   
 
 }
+/*TABLET MEDIA QUERIES START*/
+@media (max-width: 820px) and (min-width: 740px) {
+  .App {
+  display: flex;
+  border-radius: 20px;
+  border: solid 2px #004369;
+  box-shadow: inset 0px 0px 10px 8px rgba(255, 255, 255, 1.0);
+  overflow: hidden;
+  background-color: #f2f2f9;
+  position: relative;
+  top: 100px;
+  left:20px;
+  height: 90vh;
+  width: 820px;
+  font-size: 1.7rem;
+
+}
+.infocontainer {
+  height: 80vh;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #004369;
+  z-index: 1;
+  top: 45px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: ghostwhite groove 5px;
+  box-shadow: 0px 0px 30px 10px RGB(0,125,186);
+}
+.button {
+  height: 5vh;
+  font-size: 1.3rem;
+
+}
+.nav {
+  display: none;
+}
+.mobilenavbutton {
+  display: flex;
+  position: relative;
+  margin-left: 630px;
+}
+.mobilenav {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  z-index: 3;
+}
+.mobilenav div {
+  background-color: ghostwhite;
+  box-shadow: .5px .5px 2px 2px rgba(165,207,227);
+  border-radius: 20px;
+  margin: 5px;
+
+}
+#info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 800px;
+  margin-left: 550px;
+  height: 50px;
+
+}
+}
+
+/*TABLET MEDIA QUERIES END*/
 
 /*Android MEDIA QUERIES EMD*/
 
-@media screen and (width <= 375px)  {
+@media (width <= 395px)  {
 
   .App {
   display: flex;
@@ -1484,6 +1606,28 @@
   border: ghostwhite groove 5px;
   box-shadow: 0px 0px 30px 10px RGB(0,125,186);
 }
+.mobilecontact {
+  display: inline-block;
+  position: absolute;
+  top:70vh;
+  
+  
+  color: RGB(0,125,186);
+}
 
 
 }
+
+@media (width <= 365px)  {
+
+ 
+.mobilecontact {
+  display: inline-block;
+  position: absolute;
+  top:550px;
+  color: white;
+}
+
+
+}
+
