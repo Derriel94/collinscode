@@ -16,14 +16,16 @@
 /*NAVIGATION START*/
 .mobilenavbutton {
   display: none;
-  color: black;
+  color: #004369;
   margin-left: 150px;
   margin-top: 10px;
   position: absolute;
-  background-color: white;
+  background-color: ghostwhite;
+  box-shadow: .5px .5px 1px 1px rgba(165,207,227);
   border-radius: 20px;
   padding: 5px;
   z-index: 3;
+  font-weight: bold;
 }
 
 .mobilenav {
@@ -752,7 +754,7 @@
   left:0;
   margin-left: auto;
   margin-right: auto;
-  height: 90vh;
+  height: 95vh;
   width: 360px;
 
 }
@@ -874,7 +876,7 @@
   position: relative;
   top: 0px;
   left: 0px;
-  margin-top: 60px;
+  margin-top: clamp(10%, 25%, 30%);
   margin-left: 12px;
   display: flex;
   align-items: center;
@@ -1113,7 +1115,7 @@
 
 /*ANDROID MEDIA QUERIES START*/
 
-@media (max-width:365px) and (max-height:765px)  {
+@media (max-width:380px) {
 
   .App {
   display: flex;
@@ -1129,6 +1131,7 @@
   margin-right: auto;
   height: 100vh;
   width: 355px;
+
 }
 /*NAVIGATION START*/
 .mobilenavbutton {
@@ -1176,7 +1179,7 @@
 }
 
 .infocontainer {
-  height: 280px;
+  height: 95svh;
   width: 325px;
   display: flex;
   flex-direction: column;
@@ -1227,9 +1230,10 @@
   height: 280px;
   overflow: hidden;
   position: relative;
-  top: 40px;
+  top: 0px;
   left: 0px;
   margin-left: 12px;
+  margin-top: 0px;
   display: flex;
   align-items: center;
   border: ghostwhite groove 5px;
@@ -1520,7 +1524,7 @@
 
 /*Android MEDIA QUERIES EMD*/
 
-@media (width <= 395px)  {
+@media (width <= 377px)  {
 
   .App {
   display: flex;
@@ -1534,7 +1538,7 @@
   left:0;
   margin-left: auto;
   margin-right: auto;
-  height: 90vh;
+  height: 100vh;
   width: 360px;
 
 }
