@@ -876,7 +876,7 @@
   position: relative;
   top: 0px;
   left: 0px;
-  margin-top: clamp(10%, 25%, 30%);
+  margin-top: 10%;
   margin-left: 12px;
   display: flex;
   align-items: center;

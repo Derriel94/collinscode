@@ -19,7 +19,6 @@ body {
   padding: 0;
   background: linear-gradient(135deg, #1487bc55 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(225deg, #1487bc 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(315deg, #1487bc55 25%, transparent 25%) 0px 0/ 40px 40px, linear-gradient(45deg, #1487bc 25%, #f2f2f9 25%) 0px 0/ 40px 40px;
   height: 100svh;
-
 /*  background-image: url('./6.png');
   background-repeat: no-repeat;
   background-size: cover;*/
