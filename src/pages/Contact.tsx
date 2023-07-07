@@ -1,11 +1,13 @@
-import { useState, ChangeEvent } from "react";
+import { useState, useRef, ChangeEvent } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 
 const Contact = () => {
 	const [name, setName] = useState<string>('Cool Client or Employer');
 	const [email, setEmail] = useState<string>('cool@email.com');
 	const [message, setMessage] = useState<string>(`cool web/app/content idea, set your price and we will talk. Potential employer?`);
+	const form = useRef<HTMLInputElement>();
 
 	const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     	setName(e.target.value);
@@ -16,8 +18,19 @@ const Contact = () => {
   	const handleMessageChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     	setMessage(e.target.value);
   	}
-  	const handleSubmit = () => {
- 
+  		
+  	const handleSubmit = async (e) => {
+  		e.preventDefault();
+ 		try {
+ 				//import.meta.env.
+ 			const data = await emailjs.sendForm(import.meta.env.VITE_SERVICE_ID,import.meta.env.VITE_TEMPLATE_ID,form.current,import.meta.env.VITE_PUB_ID);
+ 			console.log('Success', data);
+ 			alert('Your message was sent and I will be in touch shortley')
+ 			location.reload();
+ 		} catch (error) {	
+ 			console.log('error', error);
+ 		}
+ 		
   	}
 
 	return ( 
@@ -28,7 +41,7 @@ const Contact = () => {
 			transition={{ delay: 0, duration: 2.5}}>
 			<motion.div className="contactpageleftside"
 						initial={{x: -350}}
-						animate={{x: 100}}
+						animate={{x: 25}}
 						transition={{ delay: 0, duration: 2.5, type: "spring", bounce: .8}}>
 			<motion.video 
 				initial={{scale: 1}}
@@ -50,13 +63,13 @@ const Contact = () => {
 						initial={{x: 350}}
 						animate={{x: 0}}
 						transition={{ delay: 0, duration: 2.5, type: "spring", bounce: .8}}>
-				<div className="contactform">
+				<form onSubmit={handleSubmit} ref={form} className="contactform">
 					<div className="contactname"><div>★</div> Leave A Message <div>★</div></div>
-					<input placeholder={name} className="name"onChange={(e)=>handleNameChange(e)}/>
-					<input placeholder={email} className="email"onChange={(e)=>handleEmailChange(e)}/>
-					<textarea placeholder={message} className="message"onChange={(e)=>handleMessageChange(e)}/>					
-					<input type="submit" value="submit" onClick={handleSubmit} className="submit" />
-				</div>
+					<input placeholder={name} id="from_name" name="from_name" className="name"onChange={(e)=>handleNameChange(e)}/>
+					<input placeholder={email} id="from_email" name="from_email" className="email"onChange={(e)=>handleEmailChange(e)}/>
+					<textarea placeholder={message} name="message" id="message" className="message"onChange={(e)=>handleMessageChange(e)}/>					
+					<input type="submit" value="Send" className="submit" />
+				</form>
 			</motion.div>
 			<div className="mobilecontact">
 				<h1>469.891.8404</h1>
