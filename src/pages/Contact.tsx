@@ -7,7 +7,7 @@ const Contact = () => {
 	const [name, setName] = useState<string>('Cool Client or Employer');
 	const [email, setEmail] = useState<string>('cool@email.com');
 	const [message, setMessage] = useState<string>(`cool web/app/content idea, set your price and we will talk. Potential employer?`);
-	const form = useRef<HTMLInputElement>();
+	const form = useRef<HTMLFormElement>(null);
 
 	const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     	setName(e.target.value);
@@ -19,13 +19,13 @@ const Contact = () => {
     	setMessage(e.target.value);
   	}
   		
-  	const handleSubmit = async (e) => {
+  	const handleSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
   		e.preventDefault();
  		try {
  				//import.meta.env.
- 			const data = await emailjs.sendForm(import.meta.env.VITE_SERVICE_ID,import.meta.env.VITE_TEMPLATE_ID,form.current,import.meta.env.VITE_PUB_ID);
+ 			const data = await emailjs.sendForm(import.meta.env.VITE_SERVICE_ID,import.meta.env.VITE_TEMPLATE_ID,form.current!,import.meta.env.VITE_PUB_ID);
  			console.log('Success', data);
- 			alert('Your message was sent and I will be in touch shortley')
+ 			alert('Your message was sent and I will be in touch shortly')
  			location.reload();
  		} catch (error) {	
  			console.log('error', error);
